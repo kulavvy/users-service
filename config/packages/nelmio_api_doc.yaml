@@ -1,0 +1,16 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Users service
+            description: This is a demo app!
+            version: 0.0.1
+        components:
+            securitySchemes:
+                Bearer:
+                    type: http
+                    scheme: bearer
+        security:
+    areas: # to filter documented areas
+        # disable_default_routes: true
+        path_patterns:
+            - ^(?!(\/doc.json$|\/_error)) # Accepts routes under /api except /api/doc
